@@ -1,9 +1,44 @@
 {
-  "posts":[
-    { "id": 1, "title": "json-server", "author": "Debbie Wood"}
+  "artworks": [
+    {
+      "id": 2,
+      "artistId": 1,
+      "name": "Taddei Tondo",
+      "year": "1502"
+    },
+    {
+      "id": 1,
+      "artistId": 1,
+      "name": "Madonna of the Steps",
+      "year": "1492"
+    },
+    {
+      "id": 3,
+      "artistId": 2,
+      "name": "Annunciation",
+      "year": "1480"
+    },
+    {
+      "id": 4,
+      "artistId": 2,
+      "name": "Virgin of the Rocks",
+      "year": "1462"
+    }
   ],
-  "comments":[
-    { "id": 1, "body": "comment...", "postId": 1}
-  ],
-  "profile":{"name":"typicode"}
+  "artists": [
+    {
+      "id": 1,
+      "name": "Michelangelo di Lodovico Buonarroti Simoni",
+      "dateOfBirth": "6 March 1475",
+      "birthPlace": "Caprese, Tuscany, Italy",
+      "dateOfDeath": "1564"
+    },
+    {
+      "id": 2,
+      "name": "Leonardo di ser Piero da Vinci",
+      "dateOfBirth": "15 April 1452",
+      "birthPlace": "Vinci, Tuscany, Italy",
+      "dateOfDeath": "2 May 1519"
+    }
+  ]
 }
