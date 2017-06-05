@@ -12,7 +12,7 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e-with-mocks": "concurrently --success first --kill-others \"wdio wdio.conf.js\" \"npm start\"",
     "e2e": "wdio wdio.conf.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "npm run unit && npm run e2e-with-mocks",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "mock-server": "json-server --watch mock-server/db.json"
   },
