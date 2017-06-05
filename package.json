@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "start-with-mocks": "concurrently \"npm start\" \"npm run mock-server\"",
+    "start-with-mocks": "concurrently \"NODE_ENV=e2e npm start\" \"npm run mock-server\"",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "e2e-with-mocks": "concurrently --success first --kill-others \"wdio wdio.conf.js\" \"npm start\"",
+    "e2e-with-mocks": "concurrently --success first --kill-others \"wdio wdio.conf.js\" \"NODE_ENV=e2e npm start\"",
     "e2e": "wdio wdio.conf.js",
     "test": "npm run unit && npm run e2e-with-mocks",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
