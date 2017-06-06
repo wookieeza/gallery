@@ -1,7 +1,7 @@
 <template>
   <div class="artworks-list">
     <h1>Artworks</h1>
-    <li v-for="artwork in artworks">
+    <li class="artworks-list__list-item" v-for="artwork in artworks">
       {{artwork.name}}
     </li>
 
@@ -10,6 +10,7 @@
 <script>
   /* eslint-disable */
   import path from 'path'
+  import ArtworksService from './service'
   export default {
     name: 'artworksList',
     data () {
@@ -18,9 +19,11 @@
       }
     },
     methods: {
-        getArtworks(){
-            return null;
-        }
+      getArtworks(){
+       ArtworksService.getArtworks().then((response) =>{
+           this.artworks = response.body
+       });
+      }
     },
 
     created(){

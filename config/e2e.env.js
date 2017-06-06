@@ -3,5 +3,5 @@ var devEnv = require('./dev.env')
 
 module.exports = merge(devEnv, {
   NODE_ENV: '"e2e"',
-  API_BASE: '"http://localhost:3000/"'
+  API_BASE: '"http://localhost:3000"'
 });

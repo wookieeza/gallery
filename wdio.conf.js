@@ -72,7 +72,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://localhost',
+    baseUrl: process.env.TARGET_URL_BASE || "http://localhost:8000/v2",
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -166,9 +166,11 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
-    //
+    before: function (capabilities, specs) {
+      var chai = require('chai');
+      global.expect = chai.expect;
+      global.should = chai.Should();
+    },
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
