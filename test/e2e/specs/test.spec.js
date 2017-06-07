@@ -4,9 +4,8 @@ var expect = chai.expect;
 var path = require('path');
 
 describe('hello page', function() {
-  it('should say we\'ve gpt this', function () {
-    //browser.url(path.join(':8080/#','/hello'));
-    browser.url('http://localhost:8080/#/hello');
+  it('should say we\'ve got this', function () {
+    browser.url('http://localhost:8080/hello');
     browser.waitForVisible('.hello h1');
     assert(browser.isVisible('.hello h1'));
     console.log('**********',browser.element('.hello h1').getText());

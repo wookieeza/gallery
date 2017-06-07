@@ -6,8 +6,7 @@ var ArtworksPage = require('../page-objects/artworks-page');
 
 describe('The Artworks page', () => {
   it('should list all the artworks', () => {
-    browser.url('http://localhost:8080/#/artworks');
-    //ArtworksPage.open();
+    ArtworksPage.open();
     expect(ArtworksPage.artworksListItems.length).to.equal(4);
     expect(ArtworksPage.artworksListItems[0].getText()).to.have.string('Taddei Tondo');
     expect(ArtworksPage.artworksListItems[1].getText()).to.have.string('Madonna of the Steps');

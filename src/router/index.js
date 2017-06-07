@@ -6,6 +6,7 @@ import ArtworksList from '@/components/artworks/artworks-list'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/hello',
